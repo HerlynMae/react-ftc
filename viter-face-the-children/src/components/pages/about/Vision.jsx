@@ -17,7 +17,6 @@ const Vision = () => {
               advocacy, protection, care and development of abandoned, abused,
               or dangerously neglected children.
             </p>
-            <ActionButton text={"Sponsor Now"} />
           </div>
           <img src="./src/assets/about-vision.webp" alt="about-img" />
         </div>
