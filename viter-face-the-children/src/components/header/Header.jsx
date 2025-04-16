@@ -12,7 +12,7 @@ const Header = () => {
           <a href="#">Login</a>
         </div>
       </div>
-      <div className=" py-3 lg:py-4 px-3 bg-lightGray shadow-sm ">
+      <div className=" py-1 px-3 bg-lightGray shadow-sm ">
         <div className="flex justify-between items-center   max-w-md md:max-w-7xl w-full mx-auto px-3">
           <img
             src="./src/assets/ftc_svg_logo.svg"

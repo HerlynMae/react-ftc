@@ -1,0 +1,29 @@
+import React from "react";
+import SectionTitle from "../../partials/SectionTitle";
+import ActionButton from "../../partials/ActionButton";
+
+const Vision = () => {
+  return (
+    <section className="">
+      <div className="container">
+        <div className="flex flex-wrap-reverse md:flex-nowrap justify-between  gap-10 lg:gap-5 items-center">
+          <div className="max-w-xl">
+            <SectionTitle
+              title={"Vision"}
+              desc={"Empowering Change, Inspiring Purpose"}
+            />
+            <p className="my-5 text-gray-700">
+              A nationwide network of child care centers committed to the
+              advocacy, protection, care and development of abandoned, abused,
+              or dangerously neglected children.
+            </p>
+            <ActionButton text={"Sponsor Now"} />
+          </div>
+          <img src="./src/assets/about-vision.webp" alt="about-img" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Vision;
