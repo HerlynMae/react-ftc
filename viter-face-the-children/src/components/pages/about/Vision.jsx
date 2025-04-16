@@ -6,7 +6,8 @@ const Vision = () => {
   return (
     <section className="">
       <div className="container">
-        <div className="flex flex-wrap-reverse md:flex-nowrap justify-between  gap-10 lg:gap-5 items-center">
+        <div className="flex lg:flex-row-reverse flex-wrap-reverse md:flex-nowrap justify-between  gap-10 lg:gap-5 items-center">
+          <img src="./src/assets/about-vision.webp" alt="about-img" />
           <div className="max-w-xl">
             <SectionTitle
               title={"Vision"}
@@ -18,7 +19,6 @@ const Vision = () => {
               or dangerously neglected children.
             </p>
           </div>
-          <img src="./src/assets/about-vision.webp" alt="about-img" />
         </div>
       </div>
     </section>
