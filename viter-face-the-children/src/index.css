@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+}
+@layer utilities {
+  .container {
+    @apply overflow-hidden max-w-sm md:max-w-4xl w-full lg:max-w-[1400px] mx-auto px-3;
+  }
+  .headerNav {
+    @apply bg-lightGray flex flex-col gap-5 fixed top-[6.2rem] 
+    text-center justify-start h-screen w-full py-5
+   duration-700 right-[-100%]
+    /* desktop */
+    md:flex-row md:h-auto md:w-auto md:static md:bg-transparent;
+  }
+  .headerNav li {
+    @apply hover:text-secondary;
+  }
+  .headerNav.open {
+    @apply right-0 z-50 overflow-y-hidden;
+  }
+  .toggleMenu {
+    @apply flex flex-col gap-1 z-50 
+    /* desktop */
+    md:hidden;
+  }
+  .toggleMenu span {
+    @apply content-["*"] bg-primary w-7 h-1 
+    rounded-lg ease-in-out duration-700;
+  }
+
+  .toggleMenu.open span:first-child {
+    @apply -translate-x-1 translate-y-3 rotate-45;
+  }
+  .toggleMenu.open span:nth-child(2) {
+    @apply opacity-0;
+  }
+  .toggleMenu.open span:last-child {
+    @apply -translate-x-1 -translate-y-1 -rotate-45;
+  }
+}
