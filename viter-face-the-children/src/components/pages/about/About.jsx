@@ -1,10 +1,10 @@
 import React from "react";
 import Banner from "./Banner";
-import Header from "../../header/Header";
 import Vision from "./Vision";
 import Mission from "./Mission";
 import Gift from "../../partials/Gift";
-import Footer from "../../footer/Footer";
+import Header from "../../partials/Header";
+import Footer from "../../partials/Footer";
 
 const About = () => {
   return (
@@ -13,7 +13,7 @@ const About = () => {
       <Banner />
       <Vision />
       <Mission />
-      <Gift />
+      <Gift bgColor={"bg-lightGray"} />
       <Footer />
     </>
   );

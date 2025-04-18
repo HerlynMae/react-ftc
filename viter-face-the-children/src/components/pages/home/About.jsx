@@ -1,6 +1,5 @@
 import React from "react";
 import SectionTitle from "../../partials/SectionTitle";
-import AboutCard from "./AboutCard";
 
 const About = () => {
   return (
@@ -22,10 +21,30 @@ const About = () => {
               of support and compassion that benefits everyone.
             </p>
             <div className="mt-10 grid grid-cols-2 gap-5">
-              <AboutCard number={"20+"} text={"Years Experience"} />
-              <AboutCard number={"10+"} text={"Volunteers"} />
-              <AboutCard number={"30+"} text={"Resident Child"} />
-              <AboutCard number={"10+"} text={"Non-Resident Child"} />
+              <div className="card">
+                <h2 className="text-3xl lg:text-4xl text-secondary font-semibold">
+                  20+
+                </h2>
+                <small className="text-gray-700">Years Experience</small>
+              </div>
+              <div className="card">
+                <h2 className="text-3xl lg:text-4xl text-secondary font-semibold">
+                  10+
+                </h2>
+                <small className="text-gray-700">Volunteers</small>
+              </div>
+              <div className="card">
+                <h2 className="text-3xl lg:text-4xl text-secondary font-semibold">
+                  30+
+                </h2>
+                <small className="text-gray-700">Resident Child</small>
+              </div>
+              <div className="card">
+                <h2 className="text-3xl lg:text-4xl text-secondary font-semibold">
+                  10+
+                </h2>
+                <small className="text-gray-700">Non-Resident Child</small>
+              </div>
             </div>
           </div>
         </div>

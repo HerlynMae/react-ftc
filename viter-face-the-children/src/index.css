@@ -8,12 +8,26 @@
     @apply font-poppins;
   }
 }
+@layer components {
+  .question {
+    @apply -z-50 flex  items-center gap-5 cursor-pointer rounded-md border text-gray-700 border-gray-200 p-2  max-w-xl mb-5 lg:mb-0 hover:text-white hover:bg-primary duration-500;
+  }
+  .question.active {
+    @apply border-primary text-primary hover:text-white;
+  }
+  .answer {
+    @apply -z-50 md:absolute;
+  }
+}
 @layer utilities {
   .container {
-    @apply overflow-hidden max-w-sm md:max-w-4xl w-full lg:max-w-[1400px] mx-auto px-3;
+    @apply overflow-hidden max-w-sm md:max-w-4xl w-full lg:max-w-[1300px] mx-auto lg:px-3;
+  }
+  .bannerTitle {
+    @apply max-w-[600px];
   }
   .headerNav {
-    @apply bg-lightGray flex flex-col gap-5 fixed top-[6.2rem] 
+    @apply bg-lightGray flex flex-col gap-5 fixed top-[5.2rem] 
     text-center justify-start h-screen w-full py-5
    duration-700 right-[-100%]
     /* desktop */
@@ -43,5 +57,18 @@
   }
   .toggleMenu.open span:last-child {
     @apply -translate-x-1 -translate-y-1 -rotate-45;
+  }
+  label {
+    @apply absolute -top-2 left-3 text-xs text-primary isolate px-[.1px] z-10;
+  }
+  input,
+  textarea {
+    @apply w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-md focus:outline-none  bg-transparent focus:ring-current focus:ring-primary focus:border-primary;
+  }
+  label::after {
+    @apply absolute content-[""] top-[7.5px] left-0 right-0 bottom-0 bg-lightGray w-full h-[1px] -z-50;
+  }
+  form p {
+    @apply italic text-red-500 text-end text-xs py-1 hidden;
   }
 }
