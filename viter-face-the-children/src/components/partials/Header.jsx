@@ -28,7 +28,7 @@ const Header = () => {
       <div className=" py-2 px-3 bg-lightGray shadow-sm ">
         <div className="flex justify-between items-center   max-w-md md:max-w-7xl w-full mx-auto px-3">
           <img
-            src="./src/assets/ftc_svg_logo.svg"
+            src="./img/ftc_svg_logo.svg"
             alt="logo"
             className="w-52"
           />

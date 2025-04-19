@@ -3,6 +3,8 @@ import Home from "./components/pages/home/Home";
 import About from "./components/pages/about/About";
 import Faq from "./components/pages/faq/Faq";
 import Strategy from "./components/pages/strategy/Strategy";
+import Contact from "./components/pages/contact/Contact";
+import Sponsor from "./components/pages/sponsor/Sponsor";
 
 const App = () => {
   return (
@@ -10,7 +12,9 @@ const App = () => {
       {/* <Home /> */}
       {/* <About /> */}
       {/* <Faq /> */}
-      <Strategy />
+      {/* <Strategy /> */}
+      {/* <Contact /> */}
+      <Sponsor />
     </>
   );
 };

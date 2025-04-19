@@ -10,7 +10,7 @@ const Gift = ({ bgColor }) => {
           <h2 className=" text-lg lg:text-3xl font-semibold text-gray-700 mb-5">
             Together, We Make a Difference
           </h2>
-          <p className="text-balance text-[14px] text-gray-700">
+          <p className="text-balance leading-5 text-gray-700 ">
             Together, we lend a helping hand to those in need, offering hope and
             support where it's needed most. From volunteering our time to
             donating resources, each act of kindness strengthens our community

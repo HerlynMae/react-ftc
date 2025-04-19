@@ -6,13 +6,13 @@ const Mission = () => {
     <section className="py-40 ">
       <div className="container">
         <div className="flex flex-wrap md:flex-nowrap justify-between  gap-10 lg:gap-5 items-center">
-          <img src="./src/assets/about-mission.webp" alt="about-img" />
+          <img src="./img/about-mission.webp" alt="about-img" />
           <div className="bannerTitle">
             <SectionTitle
               title={"Mission"}
               desc={"Transforming Dreams into Reality"}
             />
-            <p className="my-5 text-gray-700 text-balance">
+            <p className="my-5 md:max-w-lg text-gray-700 text-balance">
               FTC mission is to make a difference in the lives of street
               children by rescuing, protecting, and caring for those that are
               abandoned, abused, or dangerously neglected (AADN). We are making

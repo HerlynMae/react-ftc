@@ -5,14 +5,14 @@ const OverviewAboutChildren = () => {
   return (
     <section className="py-32">
       <div className="container">
-        <div className="flex flex-wrap-reverse justify-between items-start gap-10">
+        <div className="flex flex-wrap-reverse md:flex-nowrap justify-between  gap-10">
           <div className="">
             <div className="">
               <SectionTitle
                 title={"The Problem"}
                 desc={"Rescuing Lives from Poverty and Abuse"}
               />
-              <p className="my-5 text-gray-700 md:max-w-xl">
+              <p className="my-5  leading-6 text-gray-700 md:max-w-xl">
                 Historically in the Philippines, due to widespread poverty, the
                 problem of abandoned, abused, or dangerously neglected (AADN)
                 children has been remarkably large. Many hundreds of thousands
@@ -25,7 +25,7 @@ const OverviewAboutChildren = () => {
               </p>
             </div>
             <div className="">
-              <div className="max-w-96">
+              <div className="">
                 <SectionTitle
                   title={"Our Action"}
                   desc={"Creating Lasting Change through Our Intervention"}
@@ -89,8 +89,8 @@ const OverviewAboutChildren = () => {
               </div>
             </div>
           </div>
-          <div className="">
-            <img src="./src/assets/s-banner.webp" alt="strategy-img" />
+          <div className="max-w-[570px]">
+            <img src="./img/s-banner.webp" alt="strategy-img" />
           </div>
         </div>
       </div>

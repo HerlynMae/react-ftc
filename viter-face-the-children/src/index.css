@@ -7,6 +7,9 @@
   body {
     @apply font-poppins;
   }
+  p {
+    @apply text-sm leading-8;
+  }
 }
 @layer components {
   .question {

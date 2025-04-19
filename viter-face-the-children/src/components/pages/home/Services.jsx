@@ -20,7 +20,7 @@ const Services = () => {
             <ActionButton text={"Learn more"} />
           </div>
           <div className="">
-            <img src="./src/assets/h-service.png" alt="" />
+            <img src="./img/h-service.png" alt="" />
           </div>
         </div>
       </div>

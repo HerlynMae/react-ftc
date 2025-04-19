@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../../partials/SectionTitle";
 import ActionButton from "../../partials/ActionButton";
+import ContactForm from "../../partials/ContactForm";
 
 const Contact = () => {
   return (
@@ -20,31 +21,7 @@ const Contact = () => {
               send directly to us your questions
             </p>
           </div>
-          <form className=" ">
-            <div className="relative mb-5">
-              <label>Name</label>
-              <input type="text" />
-              <p>Required</p>
-            </div>
-            <div className="relative mb-5">
-              <label>Email</label>
-              <input type="text" />
-              <p>Required</p>
-            </div>
-            <div className="relative mb-5">
-              <label>Phone</label>
-              <input type="text" />
-              <p>Required</p>
-            </div>
-            <div className="relative ">
-              <label>Subject</label>
-              <textarea className="resize-none  h-36"></textarea>
-              <p className="py-0">Required</p>
-            </div>
-            <button className="bg-secondary text-xs py-2 px-4 text-white rounded-md hover:text-gray-700">
-              Submit
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </section>

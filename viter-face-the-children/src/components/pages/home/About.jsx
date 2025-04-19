@@ -7,7 +7,7 @@ const About = () => {
       <div className="container">
         <div className="flex flex-col lg:flex-row flex-wrap-reverse md:flex-nowrap  justify-between gap-10 lg:gap-5 items-center">
           <div className="">
-            <img src="./src/assets/h-about.webp" alt="" />
+            <img src="./img/h-about.webp" alt="" />
           </div>
           <div className="max-w-md">
             <SectionTitle
