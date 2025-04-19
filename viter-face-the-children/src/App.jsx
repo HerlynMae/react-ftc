@@ -5,6 +5,7 @@ import Faq from "./components/pages/faq/Faq";
 import Strategy from "./components/pages/strategy/Strategy";
 import Contact from "./components/pages/contact/Contact";
 import Sponsor from "./components/pages/sponsor/Sponsor";
+import Donation from "./components/pages/donation/Donation";
 
 const App = () => {
   return (
@@ -14,7 +15,8 @@ const App = () => {
       {/* <Faq /> */}
       {/* <Strategy /> */}
       {/* <Contact /> */}
-      <Sponsor />
+      {/* <Sponsor /> */}
+      <Donation />
     </>
   );
 };

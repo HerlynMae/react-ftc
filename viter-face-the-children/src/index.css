@@ -21,10 +21,25 @@
   .answer {
     @apply -z-50 md:absolute;
   }
+
+  .childTab {
+    @apply hidden relative;
+  }
+
+  .childTab.active {
+    @apply flex after:content-[''] after:bg-secondary after:w-full after:h-[2px] after:rounded-lg after:absolute after:bottom-0 after:transition-all after:duration-700;
+  }
+  .childItem {
+    @apply hidden;
+  }
+
+  .childItem.active {
+    @apply block;
+  }
 }
 @layer utilities {
   .container {
-    @apply overflow-hidden max-w-sm md:max-w-4xl w-full lg:max-w-[1300px] mx-auto lg:px-3;
+    @apply overflow-hidden max-w-sm md:max-w-4xl w-full lg:max-w-[1300px] mx-auto px-3;
   }
   .bannerTitle {
     @apply max-w-[600px];

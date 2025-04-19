@@ -4,32 +4,26 @@ import { FaArrowRightLong, FaHouseChimney } from "react-icons/fa6";
 import Resident from "./Resident";
 import NonResident from "./NonResident";
 
-const items = document.querySelectorAll(".childTab");
-const contents = document.querySelectorAll(".childItem");
-//the purpose of this is to put an active in all images at one
-// the purpose of this is to put an active in all images at one
+const tabs = document.querySelectorAll(".childTab");
+const tabContents = document.querySelectorAll(".childItem");
 
-items.forEach((item) => {
-  item.addEventListener("click", () => {
-    removeActiveTab(); //remove active item is just a variable
-    item.classList.add("active");
-    const activeContent = document.querySelector(`#${item.id}-detail`); // $ it is used as its alias and used it to know the string that needs to be imported in JS and it is shorthand for the getElementByID method
-    removeActiveContent();
-    activeContent.classList.add("active");
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    setActiveTab(tab);
   });
 });
 
-//remove active item is just a variable
-function removeActiveTab() {
-  items.forEach((item) => {
-    item.classList.remove("active");
-  });
-}
+function setActiveTab(selectedTab) {
+  // remove active
+  tabs.forEach((tab) => tab.classList.remove("active"));
+  tabContents.forEach((content) => content.classList.remove("active"));
 
-function removeActiveContent() {
-  contents.forEach((content) => {
-    content.classList.remove("active");
-  });
+  // add active
+  selectedTab.classList.add("active");
+  const targetContent = document.querySelector(`#${selectedTab.id}-detail`);
+  if (targetContent) {
+    targetContent.classList.add("active");
+  }
 }
 
 const ChildrenSponsorship = () => {
@@ -41,7 +35,7 @@ const ChildrenSponsorship = () => {
           <ul className="flex gap-10 pb-2 mb-10 justify-center">
             <li>
               <button
-                className="childTab flex gap-2 items-center text-md  font-semibold text-gray-700"
+                className="childTab flex gap-2 items-center text-md  font-semibold text-gray-700 active"
                 id="tabs-1"
               >
                 <FaHouseChimney size={20} />
@@ -60,10 +54,10 @@ const ChildrenSponsorship = () => {
           </ul>
           {/* content */}
           <div className="">
-            <div className="childItem" id="tabs-1-detail">
+            <div className="childItem active" id="tabs-1-detail">
               <Resident />
             </div>
-            <div className="childItem" id="tabs-1-detail">
+            <div className="childItem" id="tabs-2-detail">
               <NonResident />
             </div>
           </div>
