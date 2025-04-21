@@ -4,7 +4,7 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 
 const DonateCard = ({ img, title, desc }) => {
   return (
-    <div className="card py-5">
+    <div className="card md:py-5">
       <img
         className="w-[265px] h-[360px] object-cover  "
         src={img}

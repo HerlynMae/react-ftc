@@ -5,10 +5,10 @@ import DonateCard from "../../partials/DonateCard";
 
 const DonationInfo = () => {
   return (
-    <section className="pt-32 pb-10 md:pt-[13rem]">
+    <section className="pt-32 pb-40 md:pt-[13rem]">
       <div className="container">
         <div className="mx-auto max-w-[1300px] w-full px-[15px]">
-          <div className="flex flex-wrap justify-center md:flex-nowrap md:gap-7 ">
+          <div className="flex flex-wrap justify-center md:flex-nowrap gap-3 md:gap-7 ">
             <DonateCard
               img={"./img/sponsor-child-opt.jpg"}
               title={"Children Sponsorship"}

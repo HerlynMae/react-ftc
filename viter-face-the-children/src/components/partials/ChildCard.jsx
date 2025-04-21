@@ -13,7 +13,7 @@ const ChildCard = ({ img, name, link, buttonText, sponsor }) => {
           <div className="">
             <h3>{name}</h3>
             <a className="text-secondary hover:text-orange-500" href="#">
-              View Info
+              {link}
             </a>
           </div>
           <button className=" flex  items-center gap-3 bg-primary text-xs py-2 px-3 text-white rounded-md hover:bg-sky-600">

@@ -1,6 +1,6 @@
 import React from "react";
 import SectionTitle from "../../partials/SectionTitle";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import QuestionAndAnswer from "../../partials/QuestionAndAnswer";
 
 const dropdowns = document.querySelectorAll(".question");
@@ -48,8 +48,9 @@ const Questions = () => {
               <p className="mb-0 text-sm lg:max-w-[85%]   question-hover:text-white">
                 Can I communicate with the child I have made a Pledge to?
               </p>
-              <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
-                <FaChevronRight />
+              <span className=" md:absolute top-3 left-[46%] text-xl flex-grow ">
+                <FaChevronRight className="hidden md:block" />
+                <FaChevronDown className="block md:hidden" />
               </span>
             </div>
             <div className="answer hidde top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
@@ -66,7 +67,8 @@ const Questions = () => {
                 How can you make sure our payment is secure?
               </p>
               <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
-                <FaChevronRight />
+                <FaChevronRight className="hidden md:block" />
+                <FaChevronDown className="block md:hidden" />
               </span>
             </div>
             <div className="answer hidden top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
@@ -85,7 +87,8 @@ const Questions = () => {
                 Can I update my card number using your website?
               </p>
               <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
-                <FaChevronRight />
+                <FaChevronRight className="hidden md:block" />
+                <FaChevronDown className="block md:hidden" />
               </span>
             </div>
             <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
@@ -103,7 +106,8 @@ const Questions = () => {
                 to on a regular basis?
               </p>
               <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
-                <FaChevronRight />
+                <FaChevronRight className="hidden md:block" />
+                <FaChevronDown className="block md:hidden" />
               </span>
             </div>
             <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
@@ -121,7 +125,8 @@ const Questions = () => {
                 Can I make a pledge to more than one FTC Child?
               </p>
               <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
-                <FaChevronRight />
+                <FaChevronRight className="hidden md:block" />
+                <FaChevronDown className="block md:hidden" />
               </span>
             </div>
             <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
@@ -137,7 +142,8 @@ const Questions = () => {
                 How much does an FTC Child Partner Pledge Cost?
               </p>
               <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
-                <FaChevronRight />
+                <FaChevronRight className="hidden md:block" />
+                <FaChevronDown className="block md:hidden" />
               </span>
             </div>
             <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">

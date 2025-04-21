@@ -19,9 +19,11 @@
     @apply border-primary text-primary hover:text-white;
   }
   .answer {
-    @apply -z-50 md:absolute;
+    @apply -z-50 md:absolute bg-gray-200;
   }
-
+  .fqaItem .icon {
+    @apply rotate-45;
+  }
   .childTab {
     @apply hidden relative;
   }
