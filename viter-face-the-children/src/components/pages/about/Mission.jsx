@@ -6,7 +6,7 @@ const Mission = () => {
     <section className="py-40 ">
       <div className="container">
         <div className="flex flex-wrap md:flex-nowrap justify-between  gap-10 lg:gap-5 items-center">
-          <img src="./img/about-mission.webp" alt="about-img" />
+          <img src="./img/about-mission.webp" alt="mission-img" />
           <div className="bannerTitle">
             <SectionTitle
               title={"Mission"}

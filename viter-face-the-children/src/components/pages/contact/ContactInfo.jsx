@@ -4,7 +4,7 @@ import ContactForm from "../../partials/ContactForm";
 
 const ContactInfo = () => {
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white md:pt-[13rem] py-20">
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:mt-5 max-w-[1100px] mx-auto">
           <div className="  px-4">

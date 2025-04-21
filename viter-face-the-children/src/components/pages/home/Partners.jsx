@@ -12,29 +12,19 @@ const Partners = () => {
           />
           <ul className="flex flex-wrap justify-center items-center gap-4 lg:gap-16 mt-5">
             <li>
-              <a href="#">
-                <img src="./img/logo-fwc.png" alt="fwc-logo" />
-              </a>
+              <img src="./img/logo-fwc.png" alt="fwc-logo" />
             </li>
             <li>
-              <a href="#">
-                <img src="./img/logo-fbs.png" alt="fbs-logo" />
-              </a>
+              <img src="./img/logo-fbs.png" alt="fbs-logo" />
             </li>
             <li>
-              <a href="#">
-                <img src="./img/logo-fca.png" alt="fca-logo" />
-              </a>
+              <img src="./img/logo-fca.png" alt="fca-logo" />
             </li>
             <li>
-              <a href="#">
-                <img src="./img/logo-ftw.png" alt="ftw-logo" />
-              </a>
+              <img src="./img/logo-ftw.png" alt="ftw-logo" />
             </li>
             <li>
-              <a href="#">
-                <img src="./img/logo-pfm.png" alt="pfm-logo" />
-              </a>
+              <img src="./img/logo-pfm.png" alt="pfm-logo" />
             </li>
           </ul>
         </div>

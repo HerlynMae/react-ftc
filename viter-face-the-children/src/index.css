@@ -54,6 +54,12 @@
   .headerNav li {
     @apply hover:text-secondary;
   }
+  .headerNav li a.active {
+    @apply text-secondary;
+  }
+  .headerNav li a.active button {
+    @apply bg-secondary;
+  }
   .headerNav.open {
     @apply right-0 z-50 overflow-y-hidden;
   }
@@ -80,7 +86,8 @@
     @apply absolute -top-2 left-3 text-xs text-primary isolate px-[.1px] z-10;
   }
   input,
-  textarea {
+  textarea,
+  select {
     @apply w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-md focus:outline-none  bg-transparent focus:ring-current focus:ring-primary focus:border-primary;
   }
   label::after {
@@ -88,5 +95,8 @@
   }
   form p {
     @apply italic text-red-500 text-end text-xs py-1 hidden;
+  }
+  form option {
+    @apply text-xs;
   }
 }

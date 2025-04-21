@@ -28,7 +28,7 @@ function setActiveTab(selectedTab) {
 
 const ChildrenSponsorship = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-52 pb-20 bg-white">
       <div className="container">
         <div className="">
           {/* tabs */}

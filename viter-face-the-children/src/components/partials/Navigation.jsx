@@ -1,29 +1,67 @@
 import React from "react";
 import ActionButton from "../partials/ActionButton";
+import { Link, NavLink, useParams } from "react-router-dom";
 
 const Navigation = () => {
   return (
     <nav className="flex gap-5 items-center ">
       <ul className="headerNav flex gap-5 items-center uppercase md:capitalize text-base text-gray-700 ">
         <li>
-          <a href="#">Home</a>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a href="#">About</a>
+          <NavLink
+            to={"/about"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            About
+          </NavLink>
         </li>
         <li>
-          <a href="#">FAQ</a>
+          <NavLink
+            to={"/faq"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            FAQ
+          </NavLink>
         </li>
         <li>
-          <a href="#">Strategy</a>
+          <NavLink
+            to={"/strategy"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Strategy
+          </NavLink>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <NavLink
+            to={"/contact"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Contact
+          </NavLink>
         </li>
         <li>
-          <a href="#">Sponsor child</a>
+          <NavLink
+            to={"/sponsor"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            Sponsor child
+          </NavLink>
         </li>
-        <ActionButton text={"Donate"} />
+        <li>
+          <NavLink
+            to={"/donation"}
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <ActionButton text={"Donate"} />
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -7,14 +7,14 @@ const About = () => {
       <div className="container">
         <div className="flex flex-col lg:flex-row flex-wrap-reverse md:flex-nowrap  justify-between gap-10 lg:gap-5 items-center">
           <div className="">
-            <img src="./img/h-about.webp" alt="" />
+            <img src="./img/h-about.webp" alt="children-img" />
           </div>
-          <div className="max-w-md">
+          <div className="max-w-lg">
             <SectionTitle
               title={"Who We Are"}
               desc={" Let's Share to Change a life today"}
             />
-            <p className="my-5 text-gray-700">
+            <p className="my-5 text-gray-700 md:max-w-[29rem] md:leading-6">
               When we come together as a community, our collective efforts can
               lead to monumental changes. By fostering a culture of sharing, we
               not only help those in immediate need but also build a foundation

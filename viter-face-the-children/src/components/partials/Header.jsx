@@ -18,7 +18,7 @@ function toggleMenuFunction() {
 
 const Header = () => {
   return (
-    <header className="lg:static fixed w-full z-50">
+    <header className=" fixed w-full z-50">
       <div className="py-2 bg-primary text-white">
         <div className="flex justify-end gap-5 text-xs max-w-md lg:max-w-7xl w-full mx-auto px-3">
           <a href="#">Visit Philippine Frontline Ministries</a>
@@ -27,11 +27,7 @@ const Header = () => {
       </div>
       <div className=" py-2 px-3 bg-lightGray shadow-sm ">
         <div className="flex justify-between items-center   max-w-md md:max-w-7xl w-full mx-auto px-3">
-          <img
-            src="./img/ftc_svg_logo.svg"
-            alt="logo"
-            className="w-52"
-          />
+          <img src="./img/ftc_svg_logo.svg" alt="logo" className="w-52" />
           <Navigation />
           <div className="toggleMenu" onClick={toggleMenuFunction}>
             <span></span>

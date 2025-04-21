@@ -7,7 +7,7 @@ const Vision = () => {
     <section className="">
       <div className="container">
         <div className="flex lg:flex-row-reverse flex-wrap md:flex-nowrap justify-between  gap-10 lg:gap-5 items-center">
-          <img src="./img/about-vision.webp" alt="about-img" />
+          <img src="./img/about-vision.webp" alt="vision-img" />
           <div className="bannerTitle">
             <SectionTitle
               title={"Vision"}

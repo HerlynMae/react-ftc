@@ -1,10 +1,11 @@
 import React from "react";
 import ActionButton from "../../partials/ActionButton";
 import SectionTitle from "../../partials/SectionTitle";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <section className="py-40 ">
+    <section className="pt-52 pb-40 ">
       <div className="container">
         <div className="flex flex-wrap-reverse md:flex-nowrap justify-between  gap-10 lg:gap-5 items-center">
           <div className="">
@@ -14,11 +15,13 @@ const Banner = () => {
                 Making a difference for abandoned, abused, or dangerously
                 neglected children
               </h1>
-              <ActionButton text={"Sponsor Now"} />
+              <Link to={"/sponsor"}>
+                <ActionButton text={"Sponsor Now"} />
+              </Link>
             </div>
           </div>
           <div className="">
-            <img src="./img/h-banner.png" alt="banner-img" />
+            <img src="./img/h-banner.png" alt="children-img" />
           </div>
         </div>
       </div>

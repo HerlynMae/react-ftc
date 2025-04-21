@@ -10,7 +10,7 @@ const LoveChilden = () => {
             <img
               className="w-full md:w-96 "
               src="./img/s-love.webp"
-              alt="strategy-img"
+              alt="children-img"
             />
           </div>
           <div className="">

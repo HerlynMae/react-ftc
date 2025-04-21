@@ -5,7 +5,7 @@ import DonateCard from "../../partials/DonateCard";
 
 const DonationInfo = () => {
   return (
-    <section className="pt-32 pb-10 md:py-20">
+    <section className="pt-32 pb-10 md:pt-[13rem]">
       <div className="container">
         <div className="mx-auto max-w-[1300px] w-full px-[15px]">
           <div className="flex flex-wrap justify-center md:flex-nowrap md:gap-7 ">

@@ -3,7 +3,7 @@ import SectionTitle from "../../partials/SectionTitle";
 
 const OverviewAboutChildren = () => {
   return (
-    <section className="py-32">
+    <section className="md:pt-[13rem] py-32">
       <div className="container">
         <div className="flex flex-wrap-reverse md:flex-nowrap justify-between  gap-10">
           <div className="">
@@ -90,7 +90,7 @@ const OverviewAboutChildren = () => {
             </div>
           </div>
           <div className="max-w-[570px]">
-            <img src="./img/s-banner.webp" alt="strategy-img" />
+            <img src="./img/s-banner.webp" alt="ftc-program-img" />
           </div>
         </div>
       </div>

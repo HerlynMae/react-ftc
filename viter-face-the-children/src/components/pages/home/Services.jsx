@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../../partials/SectionTitle";
 import ActionButton from "../../partials/ActionButton";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -12,15 +13,17 @@ const Services = () => {
               title={"Our Solutions"}
               desc={"Services We Provide"}
             />
-            <p className="my-5 text-gray-700">
+            <p className="my-5 text-gray-700 md:max-w-[27rem] md:leading-6">
               Making a difference in the lives of children can be simplified
               into a few essential actions focused on their overall well-being.
               Here are the things we provide for our children
             </p>
-            <ActionButton text={"Learn more"} />
+            <Link to={"/strategy"}>
+              <ActionButton text={"Learn more"} />
+            </Link>
           </div>
           <div className="">
-            <img src="./img/h-service.png" alt="" />
+            <img src="./img/h-service.png" alt="solution-img" />
           </div>
         </div>
       </div>

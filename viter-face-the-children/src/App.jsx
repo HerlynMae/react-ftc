@@ -6,17 +6,24 @@ import Strategy from "./components/pages/strategy/Strategy";
 import Contact from "./components/pages/contact/Contact";
 import Sponsor from "./components/pages/sponsor/Sponsor";
 import Donation from "./components/pages/donation/Donation";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import PageNotFound from "./components/partials/PageNotFound";
 
 const App = () => {
   return (
     <>
-      {/* <Home /> */}
-      {/* <About /> */}
-      {/* <Faq /> */}
-      {/* <Strategy /> */}
-      {/* <Contact /> */}
-      {/* <Sponsor /> */}
-      <Donation />
+      <Router>
+        <Routes>
+          <Route path="*" element={<PageNotFound />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
+          <Route path="/strategy" element={<Strategy />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/sponsor" element={<Sponsor />} />
+          <Route path="/donation" element={<Donation />} />
+        </Routes>
+      </Router>
     </>
   );
 };
