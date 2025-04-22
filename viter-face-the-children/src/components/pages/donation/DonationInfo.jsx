@@ -1,6 +1,4 @@
 import React from "react";
-import ActionButton from "../../partials/ActionButton";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import DonateCard from "../../partials/DonateCard";
 
 const DonationInfo = () => {

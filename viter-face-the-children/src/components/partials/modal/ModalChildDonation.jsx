@@ -2,7 +2,9 @@ import React from "react";
 import { IoClose } from "react-icons/io5";
 import { CiCircleCheck } from "react-icons/ci";
 
-const ModalChildDonation = () => {
+const ModalChildDonation = ({ isOpen, closeModal }) => {
+  if (!isOpen) return null;
+
   return (
     <section className="">
       <div className="container">
@@ -14,7 +16,7 @@ const ModalChildDonation = () => {
             <div className="min-w-[24rem] mx-auto bg-white">
               <div className="flex justify-between items-center p-3 bg-primary text-white font-semibold">
                 <h4>Sponsor</h4>
-                <button>
+                <button onClick={closeModal}>
                   <IoClose />
                 </button>
               </div>

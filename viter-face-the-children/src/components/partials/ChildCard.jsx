@@ -1,6 +1,11 @@
 import React from "react";
+import ModalChildDonation from "./modal/ModalChildDonation";
 
 const ChildCard = ({ img, name, link, buttonText, sponsor }) => {
+  // const [modalOpen, setModalOpen] = React.useState(false);
+  // const openModal = () => setModalOpen(true);
+  // const closeModal = () => setModalOpen(false);
+
   return (
     <div className="card w-[265px] ">
       <div className="relative">
@@ -19,6 +24,13 @@ const ChildCard = ({ img, name, link, buttonText, sponsor }) => {
           <button className=" flex  items-center gap-3 bg-primary text-xs py-2 px-3 text-white rounded-md hover:bg-sky-600">
             {buttonText}
           </button>
+          {/* <button
+            onClick={openModal}
+            className=" flex  items-center gap-3 bg-primary text-xs py-2 px-3 text-white rounded-md hover:bg-sky-600"
+          >
+            {buttonText}
+          </button>
+          <ModalChildDonation openModal={modalOpen} closeModal={closeModal} /> */}
         </div>
       </div>
       <div className="bg-secondary/60 w-full p-2 ">
