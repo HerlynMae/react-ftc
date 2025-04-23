@@ -1,5 +1,4 @@
 import React from "react";
-import { countryData } from "./country-data";
 import { Link } from "react-router-dom";
 
 const ChildSponsorshipCreateAccount = () => {

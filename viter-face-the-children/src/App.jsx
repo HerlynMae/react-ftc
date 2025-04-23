@@ -11,6 +11,7 @@ import PageNotFound from "./components/partials/PageNotFound";
 import ChildSponsorshipLogin from "./components/pages/access/ChildSponsorshipLogin";
 import ChildSponsorshipCreateAccount from "./components/pages/access/ChildSponsorshipCreateAccount";
 import ChildSponsorshipForgotPassword from "./components/pages/access/ChildSponsorshipForgotPassword";
+import ChildInfo from "./components/pages/sponsor/ResidentChildInfo";
 
 const App = () => {
   return (
@@ -33,6 +34,10 @@ const App = () => {
           <Route
             path="/forgot-password"
             element={<ChildSponsorshipForgotPassword />}
+          />
+          <Route
+            path="/child-info/:residentChildInfoId"
+            element={<ChildInfo />}
           />
         </Routes>
       </Router>
