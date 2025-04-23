@@ -85,16 +85,14 @@
     @apply -translate-x-1 -translate-y-1 -rotate-45;
   }
   label {
-    @apply absolute -top-2 left-3 text-xs text-primary isolate px-[.1px] z-10;
+    @apply absolute -top-2 left-3 text-xs text-primary isolate px-[.1px] z-10 after:absolute after:content-[""] after:top-[7px] after:left-0 after:right-0 after:bottom-0 after:bg-lightGray after:w-full after:h-[3px] after:-z-50;
   }
   input,
   textarea,
   select {
-    @apply w-full p-2 text-sm text-gray-900 border border-gray-300 rounded-md focus:outline-none  bg-transparent focus:ring-current focus:ring-primary focus:border-primary;
+    @apply w-full p-[.36rem] text-sm text-gray-900 border border-gray-300 rounded-md focus:outline-none  bg-transparent focus:ring-current focus:ring-primary focus:border-primary;
   }
-  label::after {
-    @apply absolute content-[""] top-[7.5px] left-0 right-0 bottom-0 bg-lightGray w-full h-[1px] -z-50;
-  }
+
   form p {
     @apply italic text-red-500 text-end text-xs py-1 hidden;
   }

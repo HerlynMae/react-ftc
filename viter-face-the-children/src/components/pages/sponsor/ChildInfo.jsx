@@ -1,6 +1,5 @@
 import React from "react";
-import ChildCard from "./ChildCard";
-import ActionButton from "./ActionButton";
+import ActionButton from "../../partials/ActionButton";
 
 const ChildInfo = () => {
   return (

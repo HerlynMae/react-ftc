@@ -11,7 +11,6 @@ const Donation = () => {
       <Header />
       <DonationInfo />
       <Gift bgColor={"bg-lightGray"} />
-
       <Footer />
     </>
   );

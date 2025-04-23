@@ -1,6 +1,6 @@
 import React from "react";
 import ActionButton from "../partials/ActionButton";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navigation = () => {
   return (

@@ -8,6 +8,9 @@ import Sponsor from "./components/pages/sponsor/Sponsor";
 import Donation from "./components/pages/donation/Donation";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import PageNotFound from "./components/partials/PageNotFound";
+import ChildSponsorshipLogin from "./components/pages/access/ChildSponsorshipLogin";
+import ChildSponsorshipCreateAccount from "./components/pages/access/ChildSponsorshipCreateAccount";
+import ChildSponsorshipForgotPassword from "./components/pages/access/ChildSponsorshipForgotPassword";
 
 const App = () => {
   return (
@@ -22,6 +25,15 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/sponsor" element={<Sponsor />} />
           <Route path="/donation" element={<Donation />} />
+          <Route path="/login" element={<ChildSponsorshipLogin />} />
+          <Route
+            path="/create-password"
+            element={<ChildSponsorshipCreateAccount />}
+          />
+          <Route
+            path="/forgot-password"
+            element={<ChildSponsorshipForgotPassword />}
+          />
         </Routes>
       </Router>
     </>

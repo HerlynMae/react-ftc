@@ -3,7 +3,7 @@ import Header from "../../partials/Header";
 import ChildrenSponsorship from "./ChildrenSponsorship";
 import Gift from "../../partials/Gift";
 import Footer from "../../partials/Footer";
-import ChildInfo from "../../partials/ChildInfo";
+import ChildInfo from "./ChildInfo";
 
 const Sponsor = () => {
   return (

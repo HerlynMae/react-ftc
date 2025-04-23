@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "./Navigation";
+import { Link } from "react-router-dom";
 
 // const headerNav = document.querySelector(".headerNav");
 // const toggleMenu = document.querySelector(".toggleMenu");
@@ -22,7 +23,7 @@ const Header = () => {
       <div className="py-2 bg-primary text-white">
         <div className="flex justify-end gap-5 text-xs max-w-md lg:max-w-7xl w-full mx-auto px-3">
           <a href="#">Visit Philippine Frontline Ministries</a>
-          <a href="#">Login</a>
+          <Link to={"/login"}>Login</Link>
         </div>
       </div>
       <div className=" py-1 px-3 bg-lightGray shadow-sm ">
