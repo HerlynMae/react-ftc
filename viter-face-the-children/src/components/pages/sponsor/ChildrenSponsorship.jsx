@@ -1,66 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdFamilyRestroom } from "react-icons/md";
 import { FaArrowRightLong, FaHouseChimney } from "react-icons/fa6";
 import Resident from "./Resident";
 import NonResident from "./NonResident";
 
-const tabs = document.querySelectorAll(".childTab");
-const tabContents = document.querySelectorAll(".childItem");
-
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    setActiveTab(tab);
-  });
-});
-
-function setActiveTab(selectedTab) {
-  // remove active
-  tabs.forEach((tab) => tab.classList.remove("active"));
-  tabContents.forEach((content) => content.classList.remove("active"));
-
-  // add active
-  selectedTab.classList.add("active");
-  const targetContent = document.querySelector(`#${selectedTab.id}-detail`);
-  if (targetContent) {
-    targetContent.classList.add("active");
-  }
-}
-
 const ChildrenSponsorship = () => {
+  const [activeTab, setActiveTab] = useState("tabs1");
+
   return (
     <section className="pt-52 pb-20 bg-white">
       <div className="container">
-        <div className="">
-          {/* tabs */}
-          <ul className="flex gap-10 pb-2 mb-10 justify-center">
-            <li>
-              <button
-                className="childTab flex gap-2 items-center text-md  font-semibold text-gray-700 active"
-                id="tabs-1"
-              >
-                <FaHouseChimney size={20} />
-                <p>Resident</p>
-              </button>
-            </li>
-            <li>
-              <button
-                className="childTab flex gap-2 items-center text-md  font-semibold text-gray-700"
-                id="tabs-2"
-              >
-                <MdFamilyRestroom size={20} />
-                <p>Non-Resident</p>
-              </button>
-            </li>
-          </ul>
-          {/* content */}
-          <div className="">
-            <div className="childItem active" id="tabs-1-detail">
-              <Resident />
-            </div>
-            <div className="childItem" id="tabs-2-detail">
-              <NonResident />
-            </div>
-          </div>
+        {/* Tabs */}
+        <ul className="flex gap-10 pb-2 mb-10 justify-center relative">
+          <li>
+            <button
+              onClick={() => setActiveTab("tabs1")}
+              className={`relative flex items-center gap-2 font-semibold ${
+                activeTab === "tabs1"
+                  ? "text-black after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-orange-500"
+                  : "text-gray-400"
+              }`}
+            >
+              <FaHouseChimney size={20} />
+              <span>Resident</span>
+            </button>
+          </li>
+          <li>
+            <button
+              onClick={() => setActiveTab("tabs2")}
+              className={`relative flex items-center gap-2 font-semibold ${
+                activeTab === "tabs2"
+                  ? "text-black after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-orange-500"
+                  : "text-gray-400"
+              }`}
+            >
+              <MdFamilyRestroom size={20} />
+              <span>Non-Resident</span>
+            </button>
+          </li>
+        </ul>
+
+        {/* Content */}
+        <div>
+          {activeTab === "tabs1" && <Resident />}
+          {activeTab === "tabs2" && <NonResident />}
         </div>
       </div>
     </section>

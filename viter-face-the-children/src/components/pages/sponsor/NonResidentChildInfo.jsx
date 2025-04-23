@@ -4,19 +4,18 @@ import ActionButton from "../../partials/ActionButton";
 import Header from "../../partials/Header";
 import Gift from "../../partials/Gift";
 import Footer from "../../partials/Footer";
-import { residentChildInfo } from "./sponsor-data";
+import { nonResidentChildInfo } from "./sponsor-data";
 
-const ResidentChildInfo = () => {
-  const { residentChildInfoId } = useParams();
+const NonResidentChildInfo = () => {
+  const { nonResidentChildInfoId } = useParams();
 
-  const item = residentChildInfo.find(
-    (child) => child.residentChildInfoId === residentChildInfoId
+  const item = nonResidentChildInfo.find(
+    (child) => child.nonResidentChildInfoId === nonResidentChildInfoId
   );
-
   return (
     <>
       <Header />
-      <section className="py-20 md:pt-52 md:pb-72">
+      <section className="py-40 md:pt-52 md:pb-72">
         <div className="container">
           <div className="flex flex-wrap md:flex-nowrap gap-5">
             <div className="max-w-[990px] w-full mx-auto">
@@ -60,4 +59,4 @@ const ResidentChildInfo = () => {
   );
 };
 
-export default ResidentChildInfo;
+export default NonResidentChildInfo;

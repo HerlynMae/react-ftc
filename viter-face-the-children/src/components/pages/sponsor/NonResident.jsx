@@ -1,135 +1,47 @@
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
-import ChildCard from "../../partials/ChildCard";
+import { nonResidentChildInfo } from "./sponsor-data";
+import { useNavigate } from "react-router";
 
 const NonResident = () => {
+  const navigate = useNavigate();
   return (
     <div className="">
       <div className="flex flex-wrap justify-center items-center gap-3">
-        {/* 1 */}
-        <ChildCard
-          img={"./img/trixie.jpg"}
-          name={"Trixie Mae N"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/danica.jpg"}
-          name={"Danica V"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/rosemae.jpg"}
-          name={"Rose Mae N"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/opt-rachelle.jpg"}
-          name={"Rachelle M"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        {/* 2 */}
-        <ChildCard
-          img={"./img/opt-don.jpg"}
-          name={"Richard T"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/marygrace.jpg"}
-          name={"Mary Grace V"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/eugene.jpg"}
-          name={"Eugene Lance D"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/opt-gladays.jpg"}
-          name={"Gladys T"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        {/* 3 */}
-        <ChildCard
-          img={"./img/julieann.jpg"}
-          name={"Julie Ann T"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/opt-mark.jpg"}
-          name={"Mark John B"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
-        <ChildCard
-          img={"./img/opt-marian.jpg"}
-          name={"Marian Nhicole B"}
-          link={"View Info"}
-          buttonText={
-            <>
-              Sponsor <FaArrowRightLong />
-            </>
-          }
-          sponsor={"0.00% - Sponsored"}
-        />
+        {nonResidentChildInfo.map((item) => (
+          <div className="card w-[265px]" key={item.nonResidentChildInfoId}>
+            <div className="relative">
+              <img
+                className="w-[265px] h-[365px] object-cover"
+                src={item.image}
+                alt="child-img"
+              />
+              <div className="flex justify-between items-center absolute bottom-0 w-full p-2 bg-black/25 text-white">
+                <div>
+                  <h3>{item.name}</h3>
+                  <button
+                    onClick={() =>
+                      navigate(
+                        `/non-resident-child-info/${item.nonResidentChildInfoId}`
+                      )
+                    }
+                    className="text-secondary hover:text-orange-500"
+                  >
+                    View Info
+                  </button>
+                </div>
+                <button className="flex items-center gap-3 bg-primary text-xs py-2 px-3 text-white rounded-md hover:bg-sky-600">
+                  Sponsor <FaArrowRightLong />
+                </button>
+              </div>
+            </div>
+            <div className="bg-secondary/60 w-full p-2">
+              <p className="z-30 font-semibold text-base text-white">
+                {item.percent}%- Sponsored
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -12,6 +12,8 @@ import ChildSponsorshipLogin from "./components/pages/access/ChildSponsorshipLog
 import ChildSponsorshipCreateAccount from "./components/pages/access/ChildSponsorshipCreateAccount";
 import ChildSponsorshipForgotPassword from "./components/pages/access/ChildSponsorshipForgotPassword";
 import ChildInfo from "./components/pages/sponsor/ResidentChildInfo";
+import NonResidentChildInfo from "./components/pages/sponsor/NonResidentChildInfo";
+import ResidentChildInfo from "./components/pages/sponsor/ResidentChildInfo";
 
 const App = () => {
   return (
@@ -36,8 +38,12 @@ const App = () => {
             element={<ChildSponsorshipForgotPassword />}
           />
           <Route
-            path="/child-info/:residentChildInfoId"
-            element={<ChildInfo />}
+            path="/resident-child-info/:residentChildInfoId"
+            element={<ResidentChildInfo />}
+          />
+          <Route
+            path="/non-resident-child-info/:nonResidentChildInfoId"
+            element={<NonResidentChildInfo />}
           />
         </Routes>
       </Router>

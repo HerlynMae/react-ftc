@@ -22,7 +22,7 @@ const Resident = () => {
                   <h3>{item.name}</h3>
                   <button
                     onClick={() =>
-                      navigate(`/child-info/${item.residentChildInfoId}`)
+                      navigate(`/resident-child-info/${item.residentChildInfoId}`)
                     }
                     className="text-secondary hover:text-orange-500"
                   >
