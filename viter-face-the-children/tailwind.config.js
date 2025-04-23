@@ -7,7 +7,7 @@ export default {
       colors: {
         primary: "#3f9bd1",
         secondary: "#fc9826",
-        lightGray: "#fafafa",
+        lightGray: "#f3f4f6",
       },
       fontFamily: {
         poppins: "Poppins",

@@ -25,7 +25,7 @@ const ContactForm = () => {
       </div>
       <div className="relative ">
         <label>Message</label>
-        <textarea className="resize-none  h-52"></textarea>
+        <textarea className="resize-none  h-56"></textarea>
         <p className="py-0">Required</p>
       </div>
       <button className="bg-secondary text-xs py-2 px-4 text-white rounded-md hover:text-gray-700 mt-10">

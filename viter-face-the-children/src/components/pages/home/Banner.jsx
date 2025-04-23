@@ -21,7 +21,11 @@ const Banner = () => {
             </div>
           </div>
           <div className="">
-            <img src="./img/h-banner.png" alt="children-img" />
+            <img
+              src="./img/h-banner.png"
+              alt="children-img"
+              className="lg:w-full lg:h-[35rem]"
+            />
           </div>
         </div>
       </div>

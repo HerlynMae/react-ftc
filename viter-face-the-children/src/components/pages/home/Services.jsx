@@ -19,7 +19,7 @@ const Services = () => {
               Here are the things we provide for our children
             </p>
             <Link to={"/strategy"}>
-              <ActionButton text={"Learn more"} />
+              <ActionButton text={"Learn More"} />
             </Link>
           </div>
           <div className="">

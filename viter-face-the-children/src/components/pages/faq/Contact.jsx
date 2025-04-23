@@ -16,7 +16,7 @@ const Contact = () => {
               />
             </div>
 
-            <p className="my-5 text-gray-700 md:max-w-md">
+            <p className="my-5 text-gray-700 md:max-w-sm">
               If your questions is not listed above, you can use the form to
               send directly to us your questions
             </p>

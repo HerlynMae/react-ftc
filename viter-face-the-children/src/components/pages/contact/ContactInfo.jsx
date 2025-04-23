@@ -18,19 +18,19 @@ const ContactInfo = () => {
               we strive to respond as quickly and thoroughly as possible.
             </p>
             <div className="mt-10">
-              <p className="text-gray-700 my-3 md:my-5">
+              <p className="text-gray-700 my-3 md:my-4">
                 Feel free to get in touch with us via phone
               </p>
-              <ul className="flex flex-wrap md:gap-10 text-primary font-semibold mb-10">
+              <ul className="flex flex-wrap md:gap-10 text-primary font-semibold mb-10 tracking-tighter">
                 <li>Philippines: +63 927 420 3409</li>
                 <li>USA +815 797 9177</li>
               </ul>
             </div>
             <div className="">
-              <p className="text-gray-700 my-3 md:my-5">
+              <p className="text-gray-700 my-3 md:my-4">
                 Visit us here in the Philippines
               </p>
-              <p className="text-primary font-semibold leading-snug">
+              <p className="text-primary font-semibold leading-snug tracking-tighter">
                 Frontline Mission Center, Sitio Subac, <br /> Brgy. Sto Nino,
                 San Pablo City, 4000 Laguna
               </p>

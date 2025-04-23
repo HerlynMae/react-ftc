@@ -48,7 +48,7 @@ const Questions = () => {
               <p className="mb-0 text-sm lg:max-w-[85%]   question-hover:text-white">
                 Can I communicate with the child I have made a Pledge to?
               </p>
-              <span className=" md:absolute top-3 left-[46%] text-xl flex-grow ">
+              <span className=" md:absolute top-4 left-[48%] text-md flex-grow ">
                 <FaChevronRight className="hidden md:block" />
                 <FaChevronDown className="block md:hidden" />
               </span>
@@ -66,7 +66,7 @@ const Questions = () => {
               <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
                 How can you make sure our payment is secure?
               </p>
-              <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
+              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
                 <FaChevronRight className="hidden md:block" />
                 <FaChevronDown className="block md:hidden" />
               </span>
@@ -86,7 +86,7 @@ const Questions = () => {
               <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
                 Can I update my card number using your website?
               </p>
-              <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
+              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
                 <FaChevronRight className="hidden md:block" />
                 <FaChevronDown className="block md:hidden" />
               </span>
@@ -105,7 +105,7 @@ const Questions = () => {
                 Will I receive personal updates from FTC and the child I pledge
                 to on a regular basis?
               </p>
-              <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
+              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
                 <FaChevronRight className="hidden md:block" />
                 <FaChevronDown className="block md:hidden" />
               </span>
@@ -124,7 +124,7 @@ const Questions = () => {
               <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
                 Can I make a pledge to more than one FTC Child?
               </p>
-              <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
+              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
                 <FaChevronRight className="hidden md:block" />
                 <FaChevronDown className="block md:hidden" />
               </span>
@@ -141,7 +141,7 @@ const Questions = () => {
               <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
                 How much does an FTC Child Partner Pledge Cost?
               </p>
-              <span className="md:absolute top-3 left-[46%] text-xl flex-grow ">
+              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
                 <FaChevronRight className="hidden md:block" />
                 <FaChevronDown className="block md:hidden" />
               </span>

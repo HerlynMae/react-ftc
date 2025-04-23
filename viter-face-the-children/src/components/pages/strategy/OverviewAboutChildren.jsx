@@ -12,7 +12,7 @@ const OverviewAboutChildren = () => {
                 title={"The Problem"}
                 desc={"Rescuing Lives from Poverty and Abuse"}
               />
-              <p className="my-5  leading-6 text-gray-700 md:max-w-xl">
+              <p className="my-5   text-gray-700 md:max-w-xl">
                 Historically in the Philippines, due to widespread poverty, the
                 problem of abandoned, abused, or dangerously neglected (AADN)
                 children has been remarkably large. Many hundreds of thousands
