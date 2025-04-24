@@ -1,35 +1,11 @@
 import React from "react";
 import SectionTitle from "../../partials/SectionTitle";
 import { FaChevronDown, FaChevronRight } from "react-icons/fa";
-import QuestionAndAnswer from "../../partials/QuestionAndAnswer";
-
-const dropdowns = document.querySelectorAll(".question");
-
-dropdowns.forEach((dropdown) => {
-  dropdown.addEventListener("click", () => {
-    // event.preventDefault();
-    // select the sibling - answer
-    const answer = dropdown.nextElementSibling;
-    if (!answer) return;
-    // one at a time - if the answer is not hidden add the hidden class
-    if (!answer.classList.contains("hidden")) {
-      answer.classList.add("hidden");
-      return;
-    }
-    document.querySelectorAll(".question").forEach(function (q) {
-      q.classList.remove("active");
-    });
-    // close all other answers
-    document.querySelectorAll(".answer").forEach((a) => {
-      a.classList.add("hidden");
-    });
-    // open the clicked one
-    answer.classList.remove("hidden");
-    dropdown.classList.add("active");
-  });
-});
+import { faqInfo } from "./faq-data";
 
 const Questions = () => {
+  const [accordionOpen, setAccordionOpen] = React.useState(false);
+
   return (
     <section className="md:pt-[13rem] py-32 ">
       <div className="max-w-6xl mx-auto px-3 ">
@@ -41,26 +17,37 @@ const Questions = () => {
         </div>
         {/* accordion */}
         <div className="my-20  ">
-          <div className="faqItem relative mb-8 ">
-            <div className="question active">
-              <p className="text-xl font-semibold opacity-50 ">01</p>
+          {faqInfo.map((item) => (
+            <div className="faqItem relative mb-8 ">
+              <button
+                className="inline-block w-full text-left"
+                onClick={() => setAccordionOpen(!accordionOpen)}
+              >
+                <div className="question">
+                  <p className="text-xl font-semibold opacity-50 ">
+                    {item.number}
+                  </p>
+                  <p className={"mb-0 text-sm  lg:max-w-[85%] question-hover:text-white"}>
+                    {item.question}
+                  </p>
+                  <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
+                    <FaChevronRight className="hidden md:block" />
+                    <FaChevronDown className="block md:hidden" />
+                  </span>
+                </div>
+              </button>
 
-              <p className="mb-0 text-sm lg:max-w-[85%]   question-hover:text-white">
-                Can I communicate with the child I have made a Pledge to?
-              </p>
-              <span className=" md:absolute top-4 left-[48%] text-md flex-grow ">
-                <FaChevronRight className="hidden md:block" />
-                <FaChevronDown className="block md:hidden" />
-              </span>
+              <div className="answer top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
+                {accordionOpen && (
+                  <p className="leading-snug text-gray-700">{item.answer}</p>
+                )
+                  ? ""
+                  : ""}
+              </div>
             </div>
-            <div className="answer hidde top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
-              <p className="leading-snug text-gray-700">
-                Yes. You can email them, but all communication is monitored by
-                FTC management.
-              </p>
-            </div>
-          </div>
-          <div className="faqItem relative mb-8 ">
+          ))}
+
+          {/* <div className="faqItem relative mb-8 ">
             <div className="question">
               <p className="text-xl font-semibold opacity-50 ">02</p>
               <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
@@ -154,69 +141,8 @@ const Questions = () => {
                 presented for a selected child on the sponsorship page.
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
-        {/* <div className="">
-          <QuestionAndAnswer
-            number={"01"}
-            question={
-              "Can I communicate with the child I have made a Pledge to?"
-            }
-            answer={
-              "Yes. You can email them, but all communication is monitored by FTC management."
-            }
-          />
-          <QuestionAndAnswer
-            number={"02"}
-            question={
-              "Can I communicate with the child I have made a Pledge to?"
-            }
-            answer={
-              "Our online donation transaction is a secure SSL encrypted payment using Stripe payment processor with the best-in-class security tools and practices to maintain a high level of security."
-            }
-          />
-          <QuestionAndAnswer
-            number={"03"}
-            question={
-              "Can I communicate with the child I have made a Pledge to?"
-            }
-            answer={
-              "Our online donation transaction is a secure SSL encrypted payment using Stripe payment processor with the best-in-class security tools and practices to maintain a high level of security."
-            }
-          />
-          <QuestionAndAnswer
-            number={"04"}
-            question={
-              "Will I receive personal updates from FTC and the child I pledge to on a regular basis?"
-            }
-            answer={
-              "Yes, you will receive regular updates about the progress and developments of our program. Additionally, from time to time you will receive communications directly from the child you sponsor."
-            }
-          />
-          <QuestionAndAnswer
-            number={"05"}
-            question={"Can I make a pledge to more than one FTC Child?"}
-            answer={
-              "Yes. We welcome your pledges to as many children as possible!"
-            }
-          />
-          <QuestionAndAnswer
-            number={"06"}
-            question={
-              "Can I make a Partner Pledge for the entire monthly care of a child in the FTC program?"
-            }
-            answer={
-              "Yes. But the full-care sponsorship of a child in our program is limited to $200 monthly. Therefore, if a child has current sponsorship pledges, the website will allow only the remaining balance necessary for full-care coverage."
-            }
-          />
-          <QuestionAndAnswer
-            number={"07"}
-            question={"How much does an FTC Child Partner Pledge Cost?"}
-            answer={
-              "You can partner with us by sponsoring a child for as little as $20 monthly. You can also select higher sponsorship amounts if the child has remaining full-care needs. Please see the options presented for a selected child on the sponsorship page."
-            }
-          />
-        </div> */}
       </div>
     </section>
   );

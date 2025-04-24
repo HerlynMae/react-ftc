@@ -2,14 +2,6 @@ import React from "react";
 import Navigation from "./Navigation";
 import { Link } from "react-router-dom";
 
-// const headerNav = document.querySelector(".headerNav");
-// const toggleMenu = document.querySelector(".toggleMenu");
-
-// toggleMenu.addEventListener("click", () => {
-//   headerNav.classList.toggle("open");
-//   toggleMenu.classList.toggle("open");
-// });
-
 function toggleMenuFunction() {
   const headerNav = document.querySelector(".headerNav");
   const toggleMenu = document.querySelector(".toggleMenu");

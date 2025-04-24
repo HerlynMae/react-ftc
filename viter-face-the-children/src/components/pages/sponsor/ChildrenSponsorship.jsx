@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdFamilyRestroom } from "react-icons/md";
-import { FaArrowRightLong, FaHouseChimney } from "react-icons/fa6";
+import { FaHouseChimney } from "react-icons/fa6";
 import Resident from "./Resident";
 import NonResident from "./NonResident";
 
