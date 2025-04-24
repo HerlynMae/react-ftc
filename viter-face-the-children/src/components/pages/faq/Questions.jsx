@@ -27,7 +27,7 @@ const Questions = () => {
                   <p className="text-xl font-semibold opacity-50 ">
                     {item.number}
                   </p>
-                  <p className={"mb-0 text-sm  lg:max-w-[85%] question-hover:text-white"}>
+                  <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
                     {item.question}
                   </p>
                   <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
@@ -37,12 +37,20 @@ const Questions = () => {
                 </div>
               </button>
 
-              <div className="answer top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
-                {accordionOpen && (
-                  <p className="leading-snug text-gray-700">{item.answer}</p>
-                )
-                  ? ""
-                  : ""}
+              <div
+                className={
+                  accordionOpen
+                    ? ""
+                    : "answer leading-snug text-gray-700 top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md"
+                }
+              >
+                <p
+                  className={
+                    accordionOpen ? "hidden" : "leading-snug text-gray-700"
+                  }
+                >
+                  {item.answer}
+                </p>
               </div>
             </div>
           ))}
