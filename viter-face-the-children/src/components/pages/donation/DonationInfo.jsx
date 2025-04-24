@@ -1,8 +1,9 @@
 import React from "react";
-import {  offerInfo } from "./donation-data";
+
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import ActionButton from "../../partials/ActionButton";
 import { useNavigate } from "react-router";
+import { donationInfo } from "./donation-data";
 
 const DonationInfo = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const DonationInfo = () => {
       <div className="container">
         <div className="mx-auto max-w-[1300px] w-full px-[15px]">
           <div className="flex flex-wrap justify-center md:flex-nowrap gap-3 md:gap-7 ">
-            {offerInfo.map((offer) => {
+            {donationInfo.map((offer) => (
               <div className="card md:py-5" key={offer.donationInfoId}>
                 <img
                   className="w-[265px] h-[360px] object-cover  "
@@ -23,7 +24,11 @@ const DonationInfo = () => {
                     <h3 className="font-semibold mb-4 text-gray-700 text-xl">
                       {offer.title}
                     </h3>
-                    <p className="text-xs leading-5 mb-7">{offer.desc}</p>
+                    <p className="text-xs leading-5 mb-7">
+                      {offer.desc.length > 141
+                        ? offer.desc.slice(0, 141) + "..."
+                        : offer.desc}
+                    </p>
                   </div>
                   <div className="absolute bottom-5 left-2">
                     <button
@@ -39,8 +44,8 @@ const DonationInfo = () => {
                     <ActionButton text={"Donate Now"} />
                   </div>
                 </div>
-              </div>;
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>

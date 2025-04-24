@@ -3,18 +3,19 @@ import Header from "../../partials/Header";
 import Gift from "../../partials/Gift";
 import Footer from "../../partials/Footer";
 import { useParams } from "react-router";
-import { offerInfo } from "./donation-data";
+
 import ActionButton from "../../partials/ActionButton";
+import { donationInfo } from "./donation-data";
 
 const DonateInfo = () => {
   const { donationInfoId } = useParams();
-  const offer = offerInfo.find(
+  const offer = donationInfo.find(
     (donate) => donate.donationInfoId === donationInfoId
   );
   return (
     <>
       <Header />
-      <section className="py-20">
+      <section className="py-40 lg:pt-52">
         <div className="container">
           <div className="">
             <div className="flex flex-wrap md:flex-nowrap gap-5 max-w-[850px] w-full mx-auto ">

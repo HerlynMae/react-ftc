@@ -1,4 +1,4 @@
-export const offerInfo = [
+export const donationInfo = [
   {
     donationInfoId: "children-sponsorship",
     image: "/img/sponsor-child-opt.jpg",
