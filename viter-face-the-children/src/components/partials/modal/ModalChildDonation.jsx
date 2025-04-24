@@ -2,11 +2,14 @@ import React from "react";
 import { IoClose } from "react-icons/io5";
 import { CiCircleCheck } from "react-icons/ci";
 
-const ModalChildDonation = ({ isOpen, closeModal }) => {
-  if (!isOpen) return null;
+const ModalChildDonation = ({sectionStyle}) => {
+
 
   return (
-    <section className="">
+    <section
+      className={sectionStyle}
+      onClick={(e) => e.stopPropagation()}
+    >
       <div className="container">
         <div
           className="backDrop bg-black/40 fixed w-full h-full left-0 top-0 z-1 grid place-content-center
@@ -16,7 +19,7 @@ const ModalChildDonation = ({ isOpen, closeModal }) => {
             <div className="min-w-[24rem] mx-auto bg-white">
               <div className="flex justify-between items-center p-3 bg-primary text-white font-semibold">
                 <h4>Sponsor</h4>
-                <button onClick={closeModal}>
+                <button onClick={() => setIsOpen(false)}>
                   <IoClose />
                 </button>
               </div>

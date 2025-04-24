@@ -53,13 +53,20 @@ const Resident = () => {
 
                 {isOpen && (
                   <div
-                    className="bg-black/20 fixed inset-0 w-full h-full left-0 top-0 z-1 grid place-content-center"
+                    className="bg-black/5 fixed inset-0 w-full h-full left-0 top-0 z-1 grid place-content-center"
                     onClick={() => {
                       setIsOpen(false);
                     }}
                   ></div>
+                  
                 )}
-                <ModalChildDonation />
+                {isOpen && (
+                  <ModalChildDonation
+                    sectionStyle={
+                      isOpen ? "translate-y-0" : "translate-y-[100vh]"
+                    }
+                  />
+                )}
               </div>
             </div>
             <div className="bg-secondary/60 w-full p-2">
