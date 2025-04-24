@@ -2,10 +2,23 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { residentChildInfo } from "./sponsor-data";
 import { useNavigate } from "react-router";
+import ModalChildDonation from "../../partials/modal/ModalChildDonation";
 
 const Resident = () => {
   const navigate = useNavigate();
 
+  const [isOpen, setIsOpen] = React.useState(false);
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
   return (
     <div>
       <div className="flex flex-wrap justify-center items-center gap-3">
@@ -22,16 +35,31 @@ const Resident = () => {
                   <h3>{item.name}</h3>
                   <button
                     onClick={() =>
-                      navigate(`/resident-child-info/${item.residentChildInfoId}`)
+                      navigate(
+                        `/resident-child-info/${item.residentChildInfoId}`
+                      )
                     }
                     className="text-secondary hover:text-orange-500"
                   >
                     View Info
                   </button>
                 </div>
-                <button className="flex items-center gap-3 bg-primary text-xs py-2 px-3 text-white rounded-md hover:bg-sky-600">
+                <button
+                  onClick={() => setIsOpen(true)}
+                  className="flex items-center gap-3 bg-primary text-xs py-2 px-3 text-white rounded-md hover:bg-sky-600"
+                >
                   Sponsor <FaArrowRightLong />
                 </button>
+
+                {isOpen && (
+                  <div
+                    className="bg-black/20 fixed inset-0 w-full h-full left-0 top-0 z-1 grid place-content-center"
+                    onClick={() => {
+                      setIsOpen(false);
+                    }}
+                  ></div>
+                )}
+                <ModalChildDonation />
               </div>
             </div>
             <div className="bg-secondary/60 w-full p-2">

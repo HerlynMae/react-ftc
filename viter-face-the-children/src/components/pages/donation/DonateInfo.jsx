@@ -12,6 +12,7 @@ const DonateInfo = () => {
   const offer = donationInfo.find(
     (donate) => donate.donationInfoId === donationInfoId
   );
+
   return (
     <>
       <Header />
@@ -34,6 +35,7 @@ const DonateInfo = () => {
                 </h3>
 
                 <p className="text-balance leading-5 mt-3 mb-5">{offer.desc}</p>
+
                 <ActionButton text={"Sponsor Now"} />
               </div>
             </div>

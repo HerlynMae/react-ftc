@@ -4,152 +4,69 @@ import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import { faqInfo } from "./faq-data";
 
 const Questions = () => {
-  const [accordionOpen, setAccordionOpen] = React.useState(false);
+  const [activeAccordion, setActiveAccordion] = React.useState(null);
+  const AccordionToggle = (accordion) => {
+    setActiveAccordion(activeAccordion === accordion ? null : accordion);
+  };
 
   return (
-    <section className="md:pt-[13rem] py-32 ">
-      <div className="max-w-6xl mx-auto px-3 ">
+    <section className="md:pt-[13rem] py-32">
+      <div className="max-w-6xl mx-auto px-3">
         <div className="text-center">
           <SectionTitle title={"Your Questions, Our Clarity"} />
-          <h1 className="text-2xl lg:text-[46px] text-gray-700 mb-10 font-semibold  lg:leading-snug">
+          <h1 className="text-2xl lg:text-[46px] text-gray-700 mb-10 font-semibold lg:leading-snug">
             Our Commitment to Child Development
           </h1>
         </div>
-        {/* accordion */}
-        <div className="my-20  ">
-          {faqInfo.map((item) => (
-            <div className="faqItem relative mb-8 ">
+        {/* Accordion */}
+        <div className="my-20">
+          {faqInfo.map((item, accordion) => (
+            <div key={accordion} className="faqItem relative mb-8">
               <button
                 className="inline-block w-full text-left"
-                onClick={() => setAccordionOpen(!accordionOpen)}
+                onClick={() => AccordionToggle(accordion)}
               >
-                <div className="question">
-                  <p className="text-xl font-semibold opacity-50 ">
+                <div
+                  className={
+                    activeAccordion === accordion
+                      ? "question flex  items-center gap-5 cursor-pointer rounded-md border border-primary max-w-xl text-primary p-2  hover:text-white hover:bg-primary"
+                      : "question -z-50 flex  items-center gap-5 cursor-pointer rounded-md border text-gray-700 border-gray-200 p-2  max-w-xl mb-5 lg:mb-0 hover:text-white hover:bg-primary duration-500"
+                  }
+                >
+                  <p className="text-xl font-semibold opacity-50">
                     {item.number}
                   </p>
-                  <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
+                  <p className="mb-0 text-sm lg:max-w-[85%] question-hover:text-white">
                     {item.question}
                   </p>
-                  <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
-                    <FaChevronRight className="hidden md:block" />
-                    <FaChevronDown className="block md:hidden" />
+                  <span className="md:absolute top-4 left-[48%] text-md flex-grow question-hover:text-white">
+                    <FaChevronRight
+                      className={
+                        activeAccordion === accordion
+                          ? "hidden md:block question-text-primary hover:text-white"
+                          : "hidden md:block question-text-gray-700 hover:text-white"
+                      }
+                    />
+                    <FaChevronDown
+                      className={
+                        activeAccordion === accordion
+                          ? "block md:hidden text-primary question-hover:text-white"
+                          : "block md:hidden text-gray-700  question-hover:text-white"
+                      }
+                    />
                   </span>
                 </div>
               </button>
 
               <div
-                className={
-                  accordionOpen
-                    ? ""
-                    : "answer leading-snug text-gray-700 top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md"
-                }
+                className={`answer leading-snug text-gray-700 top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md ${
+                  activeAccordion === accordion ? "" : "hidden"
+                }`}
               >
-                <p
-                  className={
-                    accordionOpen ? "hidden" : "leading-snug text-gray-700"
-                  }
-                >
-                  {item.answer}
-                </p>
+                <p className="leading-snug text-gray-700">{item.answer}</p>
               </div>
             </div>
           ))}
-
-          {/* <div className="faqItem relative mb-8 ">
-            <div className="question">
-              <p className="text-xl font-semibold opacity-50 ">02</p>
-              <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
-                How can you make sure our payment is secure?
-              </p>
-              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
-                <FaChevronRight className="hidden md:block" />
-                <FaChevronDown className="block md:hidden" />
-              </span>
-            </div>
-            <div className="answer hidden top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
-              <p className="leading-snug text-gray-700">
-                Our online donation transaction is a secure SSL encrypted
-                payment using Stripe payment processor with the best-in-class
-                security tools and practices to maintain a high level of
-                security.
-              </p>
-            </div>
-          </div>
-          <div className="faqItem relative mb-8 ">
-            <div className="question">
-              <p className="text-xl font-semibold opacity-50 ">03</p>
-              <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
-                Can I update my card number using your website?
-              </p>
-              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
-                <FaChevronRight className="hidden md:block" />
-                <FaChevronDown className="block md:hidden" />
-              </span>
-            </div>
-            <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
-              <p className="leading-snug text-gray-700">
-                Yes. You can change it on your account settings. Login to your
-                donor console.
-              </p>
-            </div>
-          </div>
-          <div className="faqItem relative mb-8 ">
-            <div className="question">
-              <p className="text-xl font-semibold opacity-50 ">04</p>
-              <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
-                Will I receive personal updates from FTC and the child I pledge
-                to on a regular basis?
-              </p>
-              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
-                <FaChevronRight className="hidden md:block" />
-                <FaChevronDown className="block md:hidden" />
-              </span>
-            </div>
-            <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
-              <p className="leading-snug text-gray-700">
-                Yes, you will receive regular updates about the progress and
-                developments of our program. Additionally, from time to time you
-                will receive communications directly from the child you sponsor.
-              </p>
-            </div>
-          </div>
-          <div className="faqItem relative mb-8 ">
-            <div className="question">
-              <p className="text-xl font-semibold opacity-50 ">05</p>
-              <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
-                Can I make a pledge to more than one FTC Child?
-              </p>
-              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
-                <FaChevronRight className="hidden md:block" />
-                <FaChevronDown className="block md:hidden" />
-              </span>
-            </div>
-            <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
-              <p className="leading-snug text-gray-700">
-                Yes. We welcome your pledges to as many children as possible!
-              </p>
-            </div>
-          </div>
-          <div className="faqItem relative mb-8 ">
-            <div className="question">
-              <p className="text-xl font-semibold opacity-50 ">07</p>
-              <p className="mb-0 text-sm  lg:max-w-[85%] question-hover:text-white">
-                How much does an FTC Child Partner Pledge Cost?
-              </p>
-              <span className="md:absolute top-4 left-[48%] text-md flex-grow ">
-                <FaChevronRight className="hidden md:block" />
-                <FaChevronDown className="block md:hidden" />
-              </span>
-            </div>
-            <div className="answer hidden  top-0 right-0 p-3 border-primary border max-w-[400px] rounded-md">
-              <p className="leading-snug text-gray-700">
-                You can partner with us by sponsoring a child for as little as
-                $20 monthly. You can also select higher sponsorship amounts if
-                the child has remaining full-care needs. Please see the options
-                presented for a selected child on the sponsorship page.
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
