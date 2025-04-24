@@ -1,5 +1,3 @@
-import ActionButton from "../../partials/ActionButton";
-
 export const residentChildInfo = [
   {
     residentChildInfoId: "john-luke",

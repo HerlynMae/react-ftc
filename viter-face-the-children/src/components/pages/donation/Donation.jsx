@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../../partials/Header";
-import DonationInfo from "./DonationInfo";
+
 import Gift from "../../partials/Gift";
 import Footer from "../../partials/Footer";
-import DonateInfo from "../../partials/DonateInfo";
+import DonationInfo from "./DonationInfo";
+import DonateInfo from "./DonateInfo";
 
 const Donation = () => {
   return (

@@ -11,9 +11,9 @@ import PageNotFound from "./components/partials/PageNotFound";
 import ChildSponsorshipLogin from "./components/pages/access/ChildSponsorshipLogin";
 import ChildSponsorshipCreateAccount from "./components/pages/access/ChildSponsorshipCreateAccount";
 import ChildSponsorshipForgotPassword from "./components/pages/access/ChildSponsorshipForgotPassword";
-import ChildInfo from "./components/pages/sponsor/ResidentChildInfo";
 import NonResidentChildInfo from "./components/pages/sponsor/NonResidentChildInfo";
 import ResidentChildInfo from "./components/pages/sponsor/ResidentChildInfo";
+import DonateInfo from "./components/pages/donation/DonateInfo";
 
 const App = () => {
   return (
@@ -45,6 +45,7 @@ const App = () => {
             path="/non-resident-child-info/:nonResidentChildInfoId"
             element={<NonResidentChildInfo />}
           />
+          <Route path="/donate-info/:donationInfoId" element={<DonateInfo />} />
         </Routes>
       </Router>
     </>
