@@ -37,6 +37,7 @@ const App = () => {
             path="/forgot-password"
             element={<ChildSponsorshipForgotPassword />}
           />
+          {/* /resident-child-info/john-luke */}
           <Route
             path="/resident-child-info/:residentChildInfoId"
             element={<ResidentChildInfo />}

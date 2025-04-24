@@ -47,7 +47,7 @@ const ResidentChildInfo = () => {
                 <li>Birthday:</li>
                 <li>{item.birthday}</li>
               </ul>
-              <h4 className="font-semibold text-lg my-4">{item.story}</h4>
+              <h4 className="font-semibold text-lg my-4">My Story</h4>
               <p className="text-balance leading-5 mb-5">{item.desc}</p>
               <ActionButton text={"Sponsor Now"} />
             </div>

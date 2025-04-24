@@ -1,9 +1,12 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
 
-const ModalGeneralDonation = () => {
+const ModalGeneralDonation = ({ sectionStyle, handleClose, child }) => {
   return (
-    <section className="">
+    <section
+      className={`fixed top-0 left-0 w-full h-full ${sectionStyle}`}
+      onClick={(e) => e.stopPropagation()}
+    >
       <div className="container">
         <div
           className="backDrop bg-black/40 fixed w-full h-full left-0 top-0 z-1 grid place-content-center
@@ -12,8 +15,8 @@ const ModalGeneralDonation = () => {
           <div className="">
             <div className="min-w-[24rem] mx-auto bg-white">
               <div className="flex justify-between items-center p-3 bg-primary text-white font-semibold">
-                <h4>General Donation</h4>
-                <button>
+                <h4>Sponsor {child?.name}</h4>
+                <button onClick={handleClose}>
                   <IoClose />
                 </button>
               </div>

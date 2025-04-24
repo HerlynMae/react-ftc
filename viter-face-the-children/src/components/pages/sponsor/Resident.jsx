@@ -6,19 +6,16 @@ import ModalChildDonation from "../../partials/modal/ModalChildDonation";
 
 const Resident = () => {
   const navigate = useNavigate();
-
   const [isOpen, setIsOpen] = React.useState(false);
-  React.useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
+  const [selectedChild, setSelectedChild] = React.useState(null);
 
+  React.useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "visible";
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "visible";
     };
   }, [isOpen]);
+
   return (
     <div>
       <div className="flex flex-wrap justify-center items-center gap-3">
@@ -45,28 +42,14 @@ const Resident = () => {
                   </button>
                 </div>
                 <button
-                  onClick={() => setIsOpen(true)}
+                  onClick={() => {
+                    setSelectedChild(item);
+                    setIsOpen(true);
+                  }}
                   className="flex items-center gap-3 bg-primary text-xs py-2 px-3 text-white rounded-md hover:bg-sky-600"
                 >
                   Sponsor <FaArrowRightLong />
                 </button>
-
-                {isOpen && (
-                  <div
-                    className="bg-black/5 fixed inset-0 w-full h-full left-0 top-0 z-1 grid place-content-center"
-                    onClick={() => {
-                      setIsOpen(false);
-                    }}
-                  ></div>
-                  
-                )}
-                {isOpen && (
-                  <ModalChildDonation
-                    sectionStyle={
-                      isOpen ? "translate-y-0" : "translate-y-[100vh]"
-                    }
-                  />
-                )}
               </div>
             </div>
             <div className="bg-secondary/60 w-full p-2">
@@ -77,6 +60,18 @@ const Resident = () => {
           </div>
         ))}
       </div>
+      {/* translate-y-0 z-20 translate-y-[100vh]*/}
+      {isOpen && (
+        <>
+          <ModalChildDonation
+            sectionStyle={
+              isOpen ? `translate-y-0 z-20` : `translate-y-[-100vh] `
+            }
+            handleClose={() => setIsOpen(false)}
+            child={selectedChild}
+          />
+        </>
+      )}
     </div>
   );
 };

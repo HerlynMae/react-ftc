@@ -18,7 +18,7 @@ const ChildrenSponsorship = () => {
               className={`relative flex items-center gap-2 font-semibold ${
                 activeTab === "tabs1"
                   ? "text-black after:absolute after:bottom-[-8px] after:left-0 after:w-full after:h-[2px] after:bg-orange-500"
-                  : "text-gray-400"
+                  : "text-gray-400 "
               }`}
             >
               <FaHouseChimney size={20} />
