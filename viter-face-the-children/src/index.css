@@ -46,13 +46,7 @@
   .bannerTitle {
     @apply max-w-[600px];
   }
-  .headerNav {
-    @apply bg-lightGray flex flex-col gap-5 fixed top-[5.2rem] 
-    text-center justify-start h-screen w-full py-5
-   duration-700 right-[-100%]
-    /* desktop */
-    md:flex-row md:h-auto md:w-auto md:static md:bg-transparent;
-  }
+
   .headerNav li {
     @apply hover:text-secondary;
   }
@@ -62,9 +56,9 @@
   .headerNav li a.active button {
     @apply bg-secondary;
   }
-  .headerNav.open {
+  /* .headerNav.open {
     @apply right-0 z-50 overflow-y-hidden;
-  }
+  } */
   .toggleMenu {
     @apply flex flex-col gap-1 z-50 
     /* desktop */

@@ -4,7 +4,7 @@ import { FaChevronDown, FaChevronRight } from "react-icons/fa";
 import { faqInfo } from "./faq-data";
 
 const Questions = () => {
-  const [activeAccordion, setActiveAccordion] = React.useState(null);
+  const [activeAccordion, setActiveAccordion] = React.useState(0);
   const AccordionToggle = (accordion) => {
     setActiveAccordion(activeAccordion === accordion ? null : accordion);
   };

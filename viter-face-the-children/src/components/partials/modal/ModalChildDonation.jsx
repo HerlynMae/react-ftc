@@ -28,11 +28,11 @@ const ModalChildDonation = ({ sectionStyle, handleClose, child }) => {
                       <div className="flex items-start pl-0 w-fit ">
                         <span className="relative bottom-2 right-2">
                           <input
-                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border  text-lightGray transition-all before:absolute 
-                            before:top-2/4 before:left-1/4 before:block before:h-10 before:w-10 before:-translate-y-6 before:-translate-x-1 before:rounded-full  before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary hover:before:opacity-10"
+                            name="donationAmount"
                             type="radio"
+                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-blue-gray-500 text-secondary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-secondary before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary"
                           />
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray bg-secondary rounded-full    hover:text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
                             <CiCircleCheck size={18} />
                           </div>
                         </span>
@@ -46,11 +46,11 @@ const ModalChildDonation = ({ sectionStyle, handleClose, child }) => {
                       <div className="flex items-start pl-0 w-fit ">
                         <span className="relative bottom-2 right-2">
                           <input
-                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border  text-lightGray transition-all before:absolute 
-                            before:top-2/4 before:left-1/4 before:block before:h-10 before:w-10 before:-translate-y-6 before:-translate-x-1 before:rounded-full  before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary hover:before:opacity-10"
+                            name="donationAmount"
                             type="radio"
+                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-blue-gray-500 text-secondary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-secondary before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary"
                           />
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray bg-secondary rounded-full    hover:text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
                             <CiCircleCheck size={18} />
                           </div>
                         </span>
@@ -64,11 +64,11 @@ const ModalChildDonation = ({ sectionStyle, handleClose, child }) => {
                       <div className="flex items-start pl-0 w-fit ">
                         <span className="relative bottom-2 right-2">
                           <input
-                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border  text-lightGray transition-all before:absolute 
-                            before:top-2/4 before:left-1/4 before:block before:h-10 before:w-10 before:-translate-y-6 before:-translate-x-1 before:rounded-full  before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary hover:before:opacity-10"
+                            name="donationAmount"
                             type="radio"
+                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-blue-gray-500 text-secondary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-secondary before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary"
                           />
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray bg-secondary rounded-full    hover:text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
                             <CiCircleCheck size={18} />
                           </div>
                         </span>
@@ -82,11 +82,11 @@ const ModalChildDonation = ({ sectionStyle, handleClose, child }) => {
                       <div className="flex items-start pl-0 w-fit ">
                         <span className="relative bottom-2 right-2">
                           <input
-                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border  text-lightGray transition-all before:absolute 
-                            before:top-2/4 before:left-1/4 before:block before:h-10 before:w-10 before:-translate-y-6 before:-translate-x-1 before:rounded-full  before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary hover:before:opacity-10"
+                            name="donationAmount"
                             type="radio"
+                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-blue-gray-500 text-secondary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-secondary before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary"
                           />
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray bg-secondary rounded-full    hover:text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
                             <CiCircleCheck size={18} />
                           </div>
                         </span>
@@ -100,11 +100,11 @@ const ModalChildDonation = ({ sectionStyle, handleClose, child }) => {
                       <div className="flex items-start pl-0 w-fit ">
                         <span className="relative bottom-2 right-2">
                           <input
-                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border  text-lightGray transition-all before:absolute 
-                            before:top-2/4 before:left-1/4 before:block before:h-10 before:w-10 before:-translate-y-6 before:-translate-x-1 before:rounded-full  before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary hover:before:opacity-10"
+                            name="donationAmount"
                             type="radio"
+                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-blue-gray-500 text-secondary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-secondary before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary"
                           />
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray bg-secondary rounded-full    hover:text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
                             <CiCircleCheck size={18} />
                           </div>
                         </span>
@@ -118,11 +118,11 @@ const ModalChildDonation = ({ sectionStyle, handleClose, child }) => {
                       <div className="flex items-start pl-0 w-fit ">
                         <span className="relative bottom-2 right-2">
                           <input
-                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border  text-lightGray transition-all before:absolute 
-                            before:top-2/4 before:left-1/4 before:block before:h-10 before:w-10 before:-translate-y-6 before:-translate-x-1 before:rounded-full  before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary hover:before:opacity-10"
+                            name="donationAmount"
                             type="radio"
+                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-blue-gray-500 text-secondary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-secondary before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary"
                           />
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray bg-secondary rounded-full    hover:text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
                             <CiCircleCheck size={18} />
                           </div>
                         </span>
@@ -136,11 +136,11 @@ const ModalChildDonation = ({ sectionStyle, handleClose, child }) => {
                       <div className="flex items-start pl-0 w-fit ">
                         <span className="relative bottom-2 right-2">
                           <input
-                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border  text-lightGray transition-all before:absolute 
-                            before:top-2/4 before:left-1/4 before:block before:h-10 before:w-10 before:-translate-y-6 before:-translate-x-1 before:rounded-full  before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary hover:before:opacity-10"
+                            name="donationAmount"
                             type="radio"
+                            className="before:content[''] peer p-1 relative h-4 w-4 cursor-pointer appearance-none rounded-full border border-blue-gray-500 text-secondary transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-10 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-secondary before:opacity-0 before:transition-opacity checked:border-secondary hover:border-secondary checked:before:bg-secondary hover:before:bg-secondary"
                           />
-                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
+                          <div className="pointer-events-none absolute top-2/4 left-2/4 -translate-y-3 -translate-x-2/4 text-lightGray bg-secondary rounded-full    hover:text-lightGray peer-hover:bg-secondary peer-hover:rounded-full opacity-0 transition-opacity peer-checked:opacity-100 peer-hover:opacity-100">
                             <CiCircleCheck size={18} />
                           </div>
                         </span>
